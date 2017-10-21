@@ -2,4 +2,4 @@
 
 - Great demo using sirikit
 
-![Demo](http://url/to/img.png)
+![Demo](https://github.com/erikfloresq/SiriKit/blob/master/screenshot/DemoImage.png)

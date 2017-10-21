@@ -74,8 +74,8 @@ extension IntentHandler: INCreateNoteIntentHandling {
         let userActivity = NSUserActivity(activityType: NSStringFromClass(INCreateNoteIntent.self))
         let response = INCreateNoteIntentResponse(code: .success, userActivity: userActivity)
         response.createdNote = INNote(title: intent.title!, contents: [intent.content!], groupName: intent.groupName, createdDateComponents: nil, modifiedDateComponents: nil, identifier: nil)
-        completion(response)
         NotificationCenter.default.post(name: NSNotification.Name("AddNote"), object:["addNote":true], userInfo: nil)
+        completion(response)
     }
     
 }

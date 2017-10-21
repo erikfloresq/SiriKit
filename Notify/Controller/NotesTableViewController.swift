@@ -48,11 +48,8 @@ class NotesTableViewController: UITableViewController {
     
     @objc
     func refreshStoreData(_ sender:UIRefreshControl) {
-        sender.beginRefreshing()
-        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
-            sender.endRefreshing()
-            self.addStoredDataToMemory()
-        }
+        sender.endRefreshing()
+        self.addStoredDataToMemory()
     }
     
     @objc
